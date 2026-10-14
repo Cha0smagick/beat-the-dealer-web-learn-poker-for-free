@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Lost in the pit — Beat the Dealer</title>
+<meta name="robots" content="noindex">
+<script>
+(function () {
+  try {
+    if (sessionStorage.getItem("btd404")) return; // second bounce: stop, show the link
+    sessionStorage.setItem("btd404", "1");
+    var seg = location.pathname.split("/").filter(Boolean);
+    // project site (/repo/...) → repo root; user site (/page) → origin root
+    var base = seg.length >= 2 ? "/" + seg[0] + "/" : "/";
+    location.replace(base + "#/");
+  } catch (e) { /* stay on the styled page */ }
+})();
+</script>
+<style>
+  body{margin:0;min-height:100vh;display:grid;place-items:center;background:#0b3d2e;color:#f5ead6;
+       font-family:Georgia,serif;text-align:center}
+  a{color:#d4af37}
+</style>
+</head>
+<body>
+<div>
+  <h1>404 — Card off the table</h1>
+  <p>That page was barred from the casino.</p>
+  <p><a href="/">Return to the felt</a></p>
+</div>
+</body>
+</html>
