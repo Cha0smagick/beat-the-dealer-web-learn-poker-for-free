@@ -198,7 +198,7 @@
       const s = this.load();
       return '<div class="badges">' + BADGES.map(b =>
         `<div class="badge ${s.badges.indexOf(b.id) >= 0 ? "won" : ""}"><span class="ico">${b.ico}</span>` +
-        `<span class="nm">${b.name}</span><span class="ds">${b.desc}</span></div>`).join("") + "</div>";
+        `<span class="nm">${window.BTD.I18N ? window.BTD.I18N.f(b, "name") : b.name}</span><span class="ds">${window.BTD.I18N ? window.BTD.I18N.f(b, "desc") : b.desc}</span></div>`).join("") + "</div>";
     },
   };
 
@@ -240,11 +240,15 @@
       const total = questions.length;
       const best = Store.quizBest(chapterId);
       Store.recordQuiz(chapterId, score, total);
-      const pill = el("p", "", `<span class="score-pill">Score: ${score} / ${total}` +
-        (best !== null && score <= best ? ` · best ${best}` : ` · new best!`) + `</span>`);
+      const I18 = window.BTD.I18N;
+      const sc = I18 ? I18.ui("quiz.score") : "Score";
+      const bt = I18 ? I18.ui("quiz.best") : "best";
+      const nb = I18 ? I18.ui("quiz.newBest") : "new best!";
+      const pill = el("p", "", `<span class="score-pill">${sc}: ${score} / ${total}` +
+        (best !== null && score <= best ? ` · ${bt} ${best}` : ` · ${nb}`) + `</span>`);
       container.appendChild(pill);
       if (opts.onFinish) opts.onFinish(score, total);
-      const retry = el("button", "btn small", "Retry quiz");
+      const retry = el("button", "btn small", I18 ? I18.ui("quiz.retry") : "Retry quiz");
       retry.addEventListener("click", render);
       container.appendChild(retry);
     }

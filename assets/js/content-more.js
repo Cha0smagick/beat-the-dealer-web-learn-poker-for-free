@@ -49,6 +49,11 @@ you get the <b>true count</b> — the number that actually prices your bets.</p>
 Counting is a motor skill, not a fact. Go to the
 <a href="#/lab/count">Card Counting Trainer</a> and count ten full decks in Hi-Lo before
 you ever judge yourself ready. Accuracy first, speed second, camouflage third.</div>
+
+<div class="protip"><span class="pt-tag">💡 Pro tip</span> <span>Drill the true-count conversion
+separately: have a friend shout a running count and a decks figure ("+11, three decks") and
+answer with the true count in one second (+3.7 ≈ +4). Counting is memory; conversion is
+surgical arithmetic. Train them apart.</span></div>
 `,
   });
 
@@ -89,6 +94,10 @@ balanced multi-level counts that advantage players still study today are its
 grandchildren. For this course, Hi-Lo is the working tool: it is what the trainer and
 simulator labs use, and it is the system whose logic you must own before any heavier
 arithmetic is worth your time.</div>
+
+<div class="protip"><span class="pt-tag">💡 Pro tip</span> <span>If you ever graduate to a system with
+unequal weights, side-count the Aces first. Aces decide bet profitability; tens decide play
+profitability. Separating them is cheaper than fusing them.</span></div>
 `,
   });
 
@@ -126,6 +135,11 @@ Bet a small fixed fraction of a large bankroll and ruin is nearly impossible. Be
 fractions of a small bankroll and ruin is nearly certain — <em>even with a winning
 system</em>. Over-betting turns a mathematically winning strategy into a guaranteed
 loss. This is the most valuable sentence in this chapter.</div>
+
+<div class="protip"><span class="pt-tag">💡 Pro tip</span> <span>Size your bet from the bankroll, never
+from the mood. Losing streaks are not information about your edge — they are variance doing
+its job. If your bankroll can't survive 100 max bets, your Kelly ceiling is lower than you
+think.</span></div>
 `,
   });
 
@@ -172,6 +186,11 @@ You now hold the whole argument of <em>Beat the Dealer</em>: the rules, the reas
 game can be beaten, the basic strategy, three counting systems, the money management
 that sizes bets, and the fieldcraft that keeps you welcome — or at least solvent. Go to
 the <a href="#/labs">Laboratory</a> and make it reflex.</div>
+
+<div class="protip"><span class="pt-tag">💡 Pro tip</span> <span>Look like a player, think like an
+accountant. The cheapest camouflage is being the boring one: minimum bets, tips, small talk,
+and leaving when the count drops without a dramatic sigh. Nobody photographs the players
+who look like they're losing pleasantly.</span></div>
 `,
   });
 

@@ -77,6 +77,11 @@ a playing system.</div>
 Some dates and dollar figures in popular histories vary slightly between sources; the
 ones above follow the account given in the book itself. The mathematics that follows
 needs no history at all — it is recomputed live in your browser.</div>
+
+<div class="protip"><span class="pt-tag">💡 Pro tip</span> <span>Learning order matters more than
+learning speed. Rules → basic strategy → counting → bet sizing. Skipping the basic strategy to
+"go straight to counting" is building a roof with no walls: counting only monetizes what the
+basic strategy protects.</span></div>
 `,
   });
 
@@ -138,6 +143,10 @@ modern game and watch the tables shift.</p>
 Different casinos, different tables, different rules. The rules are printed on the felt —
 the most honest advertising in the building. Always check: number of decks, soft-17 rule,
 blackjack payoff (never play a 6:5 table), and doubling restrictions.</div>
+
+<div class="protip"><span class="pt-tag">💡 Pro tip</span> <span>Before your first real hand, watch a
+table for thirty minutes and count the other players' totals under your breath. When you can
+anticipate the dealer's move before he makes it, you're ready for chapter 3.</span></div>
 `,
   });
 
@@ -190,6 +199,11 @@ stiffs). A deck poor in small cards and rich in tens means: more naturals at 3:2
 doubles, more dealer busts, worse outcomes for the dealer's forced draws. Count the
 balance of small cards versus tens as it drains, bet more when the balance favors you,
 and adjust borderline plays. The rest of this course is engineering detail.</div>
+
+<div class="protip"><span class="pt-tag">💡 Pro tip</span> <span>Memorize one number from this lesson:
+against a 6, the dealer busts ~42% of the time. Whenever you doubt a basic decision, ask
+"am I helping or hurting the dealer's obligation to hit?" Most of the chart's answers fall
+out of that question.</span></div>
 `,
   });
 
@@ -227,6 +241,11 @@ essentially nothing. Counting profit is built on this foundation.</p>
 Reading a chart is not knowing a chart. The <a href="#/lab/drill">Basic Strategy Drill</a>
 fires hands at you and scores every decision — the only way this becomes reflex before
 you ever sit down.</div>
+
+<div class="protip"><span class="pt-tag">💡 Pro tip</span> <span>Learn in order of profitability:
+doubles first, then hard hands, then pairs, then soft hands. Doubles return the most
+percentage points and are the easiest rows to memorize — and say every play out loud
+while you drill: "12 versus 4: stand." The mouth teaches the finger.</span></div>
 `,
   });
 
@@ -268,6 +287,10 @@ for hours is work. When Julian Braun's computer-refined tables arrived, Thorp sw
 the second edition to the simpler Hi-Lo count. But make no mistake: in 1962, men walked
 into single-deck games with this system and walked out with the casino's week. The next
 chapter teaches the refinement.</div>
+
+<div class="protip"><span class="pt-tag">💡 Pro tip</span> <span>Count in pairs: two cards seen, one
+mental step. An Ace and a 4 cancel (+4 then −1) — three at a stroke. A full deck becomes 16
+steps instead of 52, and that is where casino-speed counting begins.</span></div>
 `,
   });
 

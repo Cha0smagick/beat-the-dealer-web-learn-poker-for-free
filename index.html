@@ -23,19 +23,22 @@
       <span class="brand-badge">21</span>
       <span class="brand-text">
         <strong>BEAT THE DEALER</strong>
-        <em>The Interactive Study — a free course by cha0smagicklabs.com</em>
+        <em data-i18n="brand.tagline">The Interactive Study — a free course by cha0smagicklabs.com</em>
       </span>
     </a>
     <nav class="topnav" aria-label="Primary">
-      <a href="#/chapter/story">Story</a>
-      <a href="#/chapter/rules">Rules</a>
-      <a href="#/chapter/basic">Strategy</a>
-      <a href="#/chapter/tencount">Counts</a>
-      <a href="#/chapter/money">Money</a>
-      <a href="#/labs">Labs</a>
-      <a href="#/glossary">Glossary</a>
-      <a href="#/about">About</a>
+      <a href="#/tutorial" data-i18n="nav.tutorial">Start Here</a>
+      <a href="#/chapter/story" data-i18n="nav.story">Story</a>
+      <a href="#/chapter/rules" data-i18n="nav.rules">Rules</a>
+      <a href="#/chapter/basic" data-i18n="nav.basic">Strategy</a>
+      <a href="#/chapter/tencount" data-i18n="nav.counts">Counts</a>
+      <a href="#/chapter/money" data-i18n="nav.money">Money</a>
+      <a href="#/labs" data-i18n="nav.labs">Labs</a>
+      <a href="#/glossary" data-i18n="nav.glossary">Glossary</a>
+      <a href="#/pokerpedia" data-i18n="nav.pokerpedia">Pokerpedia</a>
+      <a href="#/about" data-i18n="nav.about">About</a>
     </nav>
+    <select id="lang-select" class="lang-select" aria-label="Language" title="Language"></select>
     <div class="xp-wrap" title="Experience">
       <div class="xp-bar"><div id="xp-fill" class="xp-fill"></div></div>
       <span id="xp-label" class="xp-label">Level 1 · 0 XP</span>
@@ -46,13 +49,13 @@
 <main id="app" tabindex="-1"></main>
 
 <footer class="footer">
-  <p><strong>Beat the Dealer — The Interactive Study.</strong> An original educational
+  <p data-i18n="footer.l1"><strong>Beat the Dealer — The Interactive Study.</strong> An original educational
   exposition of Edward O. Thorp's <em>Beat the Dealer</em> (1962; rev. 1966). No text from
   the book is reproduced.</p>
-  <p>Site, engine, labs & curriculum built free by <a href="https://cha0smagicklabs.com" rel="noopener">cha0smagicklabs.com</a>.
+  <p data-i18n="footer.l2">Site, engine, labs & curriculum built free by <a href="https://cha0smagicklabs.com" rel="noopener">cha0smagicklabs.com</a>.
   Card art: David Bellot's open-source <em>SVG-cards</em>. Strategy tables are computed live in your
   browser — nothing is copied.</p>
-  <p class="fine">Educational only. No real money. The math is honest; casinos are, too. 21+.</p>
+  <p class="fine" data-i18n="footer.l3">Educational only. No real money. The math is honest; casinos are, too. 21+.</p>
 </footer>
 
 <script defer src="assets/js/engine.js"></script>
@@ -62,12 +65,18 @@
 <script defer src="assets/js/content-more.js"></script>
 <script defer src="assets/js/quizzes.js"></script>
 <script defer src="assets/js/glossary.js"></script>
+<script defer src="assets/js/pokerpedia.js"></script>
 <script defer src="assets/js/labs/count.js"></script>
 <script defer src="assets/js/labs/drill.js"></script>
 <script defer src="assets/js/labs/table.js"></script>
 <script defer src="assets/js/labs/monte.js"></script>
 <script defer src="assets/js/labs/prob.js"></script>
 <script defer src="assets/js/labs/compute.js"></script>
+<script defer src="assets/js/i18n.js"></script>
+<script defer src="assets/js/i18n/en.js"></script>
+<script defer src="assets/js/i18n/es.js"></script>
+<script defer src="assets/js/i18n/es-chapters.js"></script>
+<script defer src="assets/js/i18n/es-quizzes.js"></script>
 <script defer src="assets/js/app.js"></script>
 </body>
 </html>
