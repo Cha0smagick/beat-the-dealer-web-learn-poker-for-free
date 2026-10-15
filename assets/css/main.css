@@ -450,15 +450,60 @@ input.search { margin-bottom: 1.1rem; }
    v3 · i18n, pro tips, welcome modal, Pokerpedia, tutorial
    ============================================================ */
 
-/* language selector */
-.lang-select {
-  align-self: center;
+/* language switcher — native packs + Google overlay, flagcdn icons */
+.lang-switcher { position: relative; align-self: center; }
+.ls-btn {
+  display: flex; align-items: center; gap: .45rem;
   background: rgba(0,0,0,.35); color: var(--cream);
   border: 1px solid rgba(212,175,55,.4); border-radius: 8px;
-  font: 600 .78rem/1 var(--sans); padding: .45rem .5rem; cursor: pointer;
+  font: 600 .78rem/1 var(--sans); padding: .5rem .6rem; cursor: pointer;
 }
-.lang-select:focus { outline: 2px solid var(--gold); }
-.lang-select option { color: var(--ink); }
+.ls-btn:hover { border-color: var(--gold); }
+.ls-btn:focus-visible { outline: 2px solid var(--gold); outline-offset: 1px; }
+.ls-flag {
+  display: block; width: 21px; height: 14px; flex: none;
+  border-radius: 2px; box-shadow: 0 0 0 1px rgba(0,0,0,.35);
+}
+.ls-caret { font-size: .6rem; opacity: .7; }
+.ls-name { white-space: nowrap; }
+.ls-panel {
+  position: absolute; right: 0; top: calc(100% + .45rem); z-index: 120;
+  min-width: 15rem; max-width: min(15rem, 84vw);
+  max-height: min(26rem, 62vh); overflow: auto;
+  background: linear-gradient(180deg, var(--felt-dark), var(--felt-deep));
+  border: 1px solid rgba(212,175,55,.5); border-radius: 12px;
+  box-shadow: var(--shadow); padding: .4rem;
+}
+.ls-head {
+  position: sticky; top: 0; background: var(--felt-deep); z-index: 1;
+  font-size: .62rem; letter-spacing: .16em; text-transform: uppercase;
+  color: var(--gold); padding: .55rem .55rem .3rem;
+}
+.ls-opt {
+  display: flex; align-items: center; gap: .55rem; width: 100%;
+  background: none; border: 0; border-radius: 8px; color: var(--cream);
+  font: 500 .82rem/1.2 var(--sans); padding: .42rem .55rem;
+  cursor: pointer; text-align: left;
+}
+.ls-opt:hover { background: rgba(212,175,55,.12); }
+.ls-opt:focus-visible { outline: 2px solid var(--gold); outline-offset: -2px; }
+.ls-opt.current { background: rgba(212,175,55,.18); box-shadow: inset 0 0 0 1px rgba(212,175,55,.55); }
+.ls-opt .ls-flag { width: 19px; height: 13px; }
+.ls-tag {
+  margin-left: auto; font-size: .6rem; letter-spacing: .08em;
+  text-transform: uppercase; color: var(--gold);
+}
+
+/* hide the Google Translate chrome; the widget anchor lives offscreen */
+.gte-anchor {
+  position: fixed; left: -9999px; top: 0; width: 220px; height: 44px;
+  overflow: hidden; opacity: 0; pointer-events: none;
+}
+.goog-te-banner-frame.skiptranslate, #goog-gt-tt, .goog-te-balloon-frame {
+  display: none !important;
+}
+.goog-text-highlight { background: none !important; box-shadow: none !important; }
+body { top: 0 !important; }
 
 /* pro-tip callout */
 .protip {

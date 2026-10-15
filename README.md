@@ -39,10 +39,23 @@ The site is pack-based and self-healing: every string lookup falls back to
 English, so a half-finished translation never breaks anything.
 
 - **Language selection**: `?lang=xx` URL param → saved choice
-  (localStorage `btd-lang`) → browser language → English. The masthead
-  selector persists your choice and reloads the page.
+  (localStorage `btd-lang`, overlay in `btd-goog`) → browser language →
+  English. The masthead flag dropdown persists your choice and reloads
+  the page (the hash route survives the reload).
+- **Two layers**:
+  1. *Native packs* — hand-curated and complete (Spanish ships included).
+     These always win over any machine translation.
+  2. *Google overlay* — ~46 more languages machine-translated on the fly
+     by the free Google Translate element. Choosing one sets the
+     `googtrans` cookie and loads Google's widget, which translates the
+     English base in place. Flag icons come from
+     [flagcdn](https://flagcdn.com) (free); the switcher itself and the
+     brand wordmark are marked `translate="no"` so Google never mangles
+     them, and the canvas charts stay in their base language (Google
+     cannot touch pixels).
 - **Architecture**: `assets/js/i18n.js` holds the core (`register`, `ui`,
-  `page`, `chapter`, `quiz`, `glossary`, `f`). The English modules
+  `page`, `chapter`, `quiz`, `glossary`, `f`, plus the `GOOGLE` table and
+  the cookie/widget plumbing). The English modules
   (`content.js`, `quizzes.js`, `glossary.js`) *are* the English source; a
   pack only overrides fields it carries, deep-merged on load.
 - **Inline bilingual data**: Pokerpedia entries and lab/badge names carry
@@ -65,7 +78,10 @@ English, so a half-finished translation never breaks anything.
 Known limits (contribution points): the interior strings of the six lab
 widgets and two data-driven widgets (`spotTheCheat`, `countWalkthrough`
 walk-through copy) remain English in v1; the pack keys for the counting
-trainer (`count.lab.*`) are already in place for wiring them.
+trainer (`count.lab.*`) are already in place for wiring them. Under the
+Google overlay the canvas charts and the six lab interiors stay in their
+base language, and quality is machine-grade — a curated pack is always
+preferred.
 
 ## Run it locally
 

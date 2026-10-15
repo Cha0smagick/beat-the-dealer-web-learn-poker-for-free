@@ -22,7 +22,7 @@
     <a class="brand" href="#/">
       <span class="brand-badge">21</span>
       <span class="brand-text">
-        <strong>BEAT THE DEALER</strong>
+        <strong translate="no">BEAT THE DEALER</strong>
         <em data-i18n="brand.tagline">The Interactive Study — a free course by cha0smagicklabs.com</em>
       </span>
     </a>
@@ -38,7 +38,7 @@
       <a href="#/pokerpedia" data-i18n="nav.pokerpedia">Pokerpedia</a>
       <a href="#/about" data-i18n="nav.about">About</a>
     </nav>
-    <select id="lang-select" class="lang-select" aria-label="Language" title="Language"></select>
+    <div id="lang-switcher" class="lang-switcher" aria-label="Language" translate="no"></div>
     <div class="xp-wrap" title="Experience">
       <div class="xp-bar"><div id="xp-fill" class="xp-fill"></div></div>
       <span id="xp-label" class="xp-label">Level 1 · 0 XP</span>
@@ -57,6 +57,10 @@
   browser — nothing is copied.</p>
   <p class="fine" data-i18n="footer.l3">Educational only. No real money. The math is honest; casinos are, too. 21+.</p>
 </footer>
+
+<!-- Google Translate element anchor — hidden offscreen; it drives the
+     cookie-based overlay for the ~46 machine-translated languages. -->
+<div id="google_translate_element" class="gte-anchor" translate="no" aria-hidden="true"></div>
 
 <script defer src="assets/js/engine.js"></script>
 <script defer src="assets/js/ui.js"></script>

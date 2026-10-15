@@ -14,6 +14,9 @@
     ui: {
       "brand.tagline": "El Estudio Interactivo — un curso gratuito de cha0smagicklabs.com",
       "lang.label": "Idioma",
+      "lang.nativeSection": "Idiomas del sitio",
+      "lang.googleSection": "Más — vía Google",
+      "lang.nativeTag": "nativo",
 
       "nav.story": "Historia", "nav.rules": "Reglas", "nav.why": "Matemáticas",
       "nav.basic": "Estrategia", "nav.counts": "Conteos", "nav.money": "Dinero",

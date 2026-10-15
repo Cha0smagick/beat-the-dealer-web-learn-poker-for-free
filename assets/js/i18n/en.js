@@ -15,6 +15,9 @@
     ui: {
       "brand.tagline": "The Interactive Study — a free course by cha0smagicklabs.com",
       "lang.label": "Language",
+      "lang.nativeSection": "Site languages",
+      "lang.googleSection": "More — via Google",
+      "lang.nativeTag": "native",
 
       "nav.story": "Story", "nav.rules": "Rules", "nav.why": "Math",
       "nav.basic": "Strategy", "nav.counts": "Counts", "nav.money": "Money",

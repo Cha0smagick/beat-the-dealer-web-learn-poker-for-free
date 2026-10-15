@@ -119,6 +119,26 @@ ok(I.ui("nonexistent.key") === "nonexistent.key", "ui() falls back to the key it
 ok(I.f({ name: "X", name__es: "X-es" }, "name") === "X", "f() returns base field in en");
 I.set ? null : null; // set() reloads the page — not testable in node
 
+console.log("== google translate layer ==");
+ok(I.GOOGLE && typeof I.GOOGLE === "object", "I18N.GOOGLE table present");
+const gk = Object.keys(I.GOOGLE || {});
+ok(gk.length >= 40, ">=40 Google overlay languages (got " + gk.length + ")");
+ok(gk.every((c) => typeof I.GOOGLE[c].n === "string" && I.GOOGLE[c].n
+  && typeof I.GOOGLE[c].f === "string" && I.GOOGLE[c].f),
+  "every Google language carries a native name + flag code");
+ok(!gk.some((c) => I.packs[c]), "Google list never shadows a curated pack");
+ok(typeof I._flagImg === "function" && I._flagImg("es").includes("flagcdn.com/w40/es.png"),
+  "flag image builder emits flagcdn URLs");
+ok(typeof I._setGoogCookie === "function" && typeof I._driveCombo === "function",
+  "Google overlay plumbing present (cookie + combo driver)");
+const htmlSrc = require("fs").readFileSync(path.join(root, "index.html"), "utf8");
+ok(htmlSrc.includes('id="lang-switcher"'), "index.html mounts the flag switcher");
+ok(htmlSrc.includes('id="google_translate_element"'), "index.html carries the Google Translate anchor");
+ok(htmlSrc.includes('translate="no"'), "brand + switcher marked notranslate");
+const prevLang = I.lang; I.lang = "es";
+ok(I._meta("es").tag === "nativo", "native pack meta resolves localized tag");
+I.lang = prevLang;
+
 console.log("== en pack ==");
 const enPack = I.packs && I.packs.en;
 ok(!!enPack, "en pack registered");
