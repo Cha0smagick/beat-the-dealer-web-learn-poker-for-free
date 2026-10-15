@@ -31,8 +31,8 @@
   T("Kelly criterion", "John Kelly Jr.'s 1956 result: the growth-optimal fraction of capital to risk is f* = edge ÷ variance. Thorp imported it into blackjack betting and later into finance.", "money");
   T("Marked cards", "Cards doctored (pin-pricks, shading, gloss patterns) so an accomplice can read their backs. An era-standard cheat targeting everyone at the table.", "cheating");
   T("Natural (blackjack)", "Ace + ten-valued card on the original two cards. Pays 3 to 2 — the player's biggest standing privilege, and the one most sensitive to ten-density.", "rules");
-  T("Penetration", "See 'Deck penetration'. The single most important number on any modern table you're evaluating.", "modern game");
   T("Peek", "The dealer's glance at the hole card for a natural when showing an Ace or ten. Modern games rule out player losses to dealer naturals after doubles/splits — the engine's 'peek convention' conditions EVs the same way.", "rules");
+  T("Penetration", "See 'Deck penetration'. The single most important number on any modern table you're evaluating.", "modern game");
   T("Running count", "The cumulative sum of count values of all cards seen since the shuffle. Raw material; must be converted to true count for betting.", "system");
   T("Second dealing", "Serving the second card from the top while pretending it is the first — the era's classic crooked-dealer move. Watch the grip, not the outcomes.", "cheating");
   T("Shoe", "The box holding multiple decks (4–8 in modern games) from which cards are dealt. Multi-deck shoes were adopted because of this book.", "modern game");

@@ -115,10 +115,10 @@ dangerous.</p>
 
 <h2>Hard, soft, and the language of totals</h2>
 <p>A <b>hard hand</b> has no Ace counted as 11 (or has an Ace that must already count as 1):
-${UI().tcard("10")}${UI().tcard("7", true)} = hard 17 — draw again and only busting is
+<span class='tcard'>10</span><span class='tcard red'>7</span> = hard 17 — draw again and only busting is
 impossible to undo. A <b>soft hand</b> contains an Ace still counted as 11:
-${UI().tcard("A")}${UI().tcard("7", true)} = soft 18. Soft hands are safe to improve:
-${UI().tcard("A")}${UI().tcard("7", true)} + ${UI().tcard("K", true)} = soft 18 — the Ace
+<span class='tcard'>A</span><span class='tcard red'>7</span> = soft 18. Soft hands are safe to improve:
+<span class='tcard'>A</span><span class='tcard red'>7</span> + <span class='tcard red'>K</span> = soft 18 — the Ace
 silently becomes 1 and you live to hit again. This asymmetry is why soft-hand strategy
 looks so strange.</p>
 
